@@ -1,0 +1,16 @@
+{
+  "name": "my-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node . -p 8088"
+  },
+  "keywords": [],
+  "author": "rily",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3"
+  },
+  "bin": {}
+}
