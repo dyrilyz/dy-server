@@ -1,19 +1,25 @@
 {
-    "name": "zhx-server",
-    "version": "1.0.4",
-    "description": "",
-    "main": "bin/index",
-    "preferglobal": "true",
-    "scripts": {
-        "start": "node . -p 8088"
-    },
-    "keywords": [],
-    "author": "rily",
-    "license": "ISC",
-    "dependencies": {
-        "cheerio": "^1.0.0-rc.3"
-    },
-    "bin": {
-        "zhx-server": "./bin/index"
-    }
+  "name": "dy-server",
+  "version": "0.0.1",
+  "description": "a simple static server.",
+  "main": "bin/dy-server",
+  "preferglobal": "true",
+  "keywords": [
+    "http-server",
+    "static-server",
+    "simple-server"
+  ],
+  "author": "rily",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "bin": {
+    "dy-server": "./bin/dy-server",
+    "ds": "./bin/dy-server"
+  }
 }

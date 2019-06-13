@@ -3,7 +3,7 @@
 const process = require('process')
 const http = require('http')
 const path = require('path')
-const util = require('./util')
+const util = require('../lib/util')
 let port = 8080
 
 const targetPath = process.cwd().replace(/\\/g, '/')
