@@ -1,9 +1,15 @@
 {
   "name": "dy-server2",
-  "version": "0.0.3beta",
+  "version": "0.0.1",
   "description": "a simple static server.",
   "main": "bin/dy-server",
   "preferglobal": "true",
+  "scripts": {
+    "publish": "npm publish",
+    "push": "git add . && git commit -m 'dev'",
+    "rm": "npm rm -g dy-server2",
+    "install": "npm i -g dy-server2"
+  },
   "keywords": [
     "http-server",
     "static-server",
