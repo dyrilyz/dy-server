@@ -1,11 +1,10 @@
 {
   "name": "dy-server2",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "a simple static server.",
   "main": "bin/dy-server",
   "preferglobal": "true",
   "scripts": {
-    "publish": "npm publish",
     "push": "git add . && git commit -m 'dev' && git push",
     "rm": "npm rm -g dy-server2",
     "install": "npm i -g dy-server2"
