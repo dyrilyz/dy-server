@@ -12,7 +12,7 @@ program
   .parse(process.argv);
 
 conf.port = program.port || 8080;
-conf.directory = program.directory || process.cwd();
+conf.directory = program.directory || process.cwd() + '/';
 
 conf.directory = conf.directory.replace(/\\+/g, '/');
 new DyServer(conf)
