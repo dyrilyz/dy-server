@@ -6,13 +6,17 @@ const version = require('../package').version;
 const conf = {};
 
 program
-  .version(version, '-v --version')
-  .option('-p --port <n>', 'server port,default 8080', parseInt)
-  .option('-d --directory <dir>', 'root directory of server')
-  .parse(process.argv);
+    .version(version, '-v --version')
+    .option('-p --port <n>', 'server port,default 8080', parseInt)
+    .option('-d --directory <dir>', 'root directory of server')
+    .parse(process.argv);
 
 conf.port = program.port || 8080;
 conf.directory = program.directory || process.cwd() + '/';
 
 conf.directory = conf.directory.replace(/\\+/g, '/');
-new DyServer(conf)
+const server = new DyServer(conf);
+server.listen();
+
+process.on('SIGINT', server.stopped);
+process.on('SIGTERM', server.stopped);
