@@ -1,6 +1,6 @@
 {
   "name": "dy-server2",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "description": "a simple static server.",
   "main": "bin/dy-server",
   "preferglobal": "true",

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const program = require('commander');
+const {exec} = require('child_process');
 const DyServer = require('../lib/dy-server');
 const version = require('../package').version;
 const conf = {};
@@ -9,6 +10,7 @@ program
     .version(version, '-v --version')
     .option('-p --port <n>', 'server port,default 8080', parseInt)
     .option('-d --directory <dir>', 'root directory of server')
+    .option('-o --output', 'open Browser')
     .parse(process.argv);
 
 conf.port = program.port || 8080;
@@ -18,5 +20,13 @@ conf.directory = conf.directory.replace(/\\+/g, '/');
 const server = new DyServer(conf);
 server.listen();
 
-process.on('SIGINT', server.stopped);
-process.on('SIGTERM', server.stopped);
+server.on('started', url => {
+    if (program.output && url) {
+        let opener = process.platform === 'win32' ? 'start' : 'open';
+        opener = `${opener} ${url}`;
+        exec(opener)
+    }
+})
+
+process.on('SIGINT', server.stop);
+process.on('SIGTERM', server.stop);
