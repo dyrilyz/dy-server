@@ -8,7 +8,7 @@ const conf = {};
 program
   .version(version, '-v --version')
   .option('-p --port <n>', 'server port,default 8080', parseInt)
-  .option('-d --directory <dir>', 'directory')
+  .option('-d --directory <dir>', 'root directory of server')
   .parse(process.argv);
 
 conf.port = program.port || 8080;
