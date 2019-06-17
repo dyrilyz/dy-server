@@ -14,5 +14,5 @@ program
 conf.port = program.port || 8080;
 conf.directory = program.directory || process.cwd();
 
-conf.directory = conf.directory.replace(/\\/g, '/');
+conf.directory = conf.directory.replace(/\\+/g, '/');
 new DyServer(conf)
