@@ -26,6 +26,7 @@ dy-server2
   -v --version          output the version number
   -p --port <n>         server port,default 8080
   -d --directory <dir>  root directory of server
+  -o --output           output to Browser
   -h, --help            output usage information
 ```
 

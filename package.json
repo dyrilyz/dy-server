@@ -1,8 +1,8 @@
 {
   "name": "dy-server2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a simple static server.",
-  "main": "bin/dy-server",
+  "main": "lib/dy-server.js",
   "preferglobal": "true",
   "keywords": [
     "http-server",

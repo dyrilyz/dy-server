@@ -10,23 +10,24 @@ program
     .version(version, '-v --version')
     .option('-p --port <n>', 'server port,default 8080', parseInt)
     .option('-d --directory <dir>', 'root directory of server')
-    .option('-o --output', 'open Browser')
+    .option('-o --output', 'output to Browser')
     .parse(process.argv);
 
 conf.port = program.port || 8080;
 conf.directory = program.directory || process.cwd() + '/';
-
 conf.directory = conf.directory.replace(/\\+/g, '/');
+
 const server = new DyServer(conf);
+
 server.listen();
 
 server.on('started', url => {
     if (program.output && url) {
         let opener = process.platform === 'win32' ? 'start' : 'open';
         opener = `${opener} ${url}`;
-        exec(opener)
+        exec(opener);
     }
-})
+});
 
 process.on('SIGINT', server.stop);
 process.on('SIGTERM', server.stop);
