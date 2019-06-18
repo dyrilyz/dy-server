@@ -1,6 +1,6 @@
 {
   "name": "dy-server2",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "a simple static server.",
   "main": "lib/dy-server.js",
   "preferglobal": "true",
