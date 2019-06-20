@@ -7,7 +7,7 @@
 npm i -g dy-server2
 ```
 
-**注**：<span style="color:#f00;">由于dy-server在npmjs中已被占用，所以此处命名为dy-server2</span>。
+**注**：由于dy-server在npmjs中已被占用，所以此处命名为dy-server2。
 
 淘宝镜像安装：
 ```
