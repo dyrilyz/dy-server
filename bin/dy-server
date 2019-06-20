@@ -11,11 +11,13 @@ program
     .option('-p --port <n>', 'server port,default 8080', parseInt)
     .option('-d --directory <dir>', 'root directory of server')
     .option('-o --output', 'output to Browser')
+    .option('-s --silent', 'Suppress log messages from output')
     .parse(process.argv);
 
 conf.port = program.port || 8080;
 conf.directory = program.directory || process.cwd() + '/';
 conf.directory = conf.directory.replace(/\\+/g, '/');
+conf.silent = program.silent;
 
 const server = new DyServer(conf);
 

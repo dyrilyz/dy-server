@@ -27,7 +27,9 @@ dy-server2
   -p --port <n>         server port,default 8080
   -d --directory <dir>  root directory of server
   -o --output           output to Browser
+  -s --silent           Suppress log messages from output
   -h, --help            output usage information
+
 ```
 
 ### 例如：
