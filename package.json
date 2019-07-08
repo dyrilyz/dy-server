@@ -1,6 +1,6 @@
 {
   "name": "dy-server2",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "description": "a simple static server.",
   "main": "lib/dy-server.js",
   "preferglobal": "true",
@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
-    "commander": "^2.20.0"
+    "commander": "^2.20.0",
+    "mime": "^2.4.4"
   },
   "files": [
     "bin",
